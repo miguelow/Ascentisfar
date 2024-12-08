@@ -1,0 +1,254 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- manrope fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+  <!-- tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Services</title>
+</head>
+
+<body class="overflow-visible">
+  <header>
+     <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
+      <!-- logo -->
+      <div>
+        <a href="./index.html">
+          <img class="lg:w-64 md:w-36 w-28" src="./img/nav-logo.avif" alt="" />
+        </a>
+      </div>
+      <!-- menu -->
+      <div class="items-center justify-center hidden space-x-4 lg:flex">
+        <a class="font-medium" href="index.html">Inicio</a>
+        <a class="font-medium" href="about.html">Quiénes somos</a>
+        <a class="font-medium" href="services.html">Servicios</a>
+        <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+        <a class="font-medium" href="products.html">Productos terminados</a>
+        <a class="font-medium" href="markets.html">Mercados</a>
+        <button
+          class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contacto</span>
+        </button>
+        <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+          <!-- English Button -->
+          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+            data-active="false">
+            <img src="./img/british-flag.avif" alt="British Flag" />
+          </a>
+          <!-- Spanish Button (active by default) -->
+          <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+            data-active="true">
+            <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+          </a>
+        </div>
+      </div>
+
+      <!-- hamburger-icon -->
+      <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center justify-start bg-slate-400 pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
+      <div class="relative flex flex-col space-y-4 text-center">
+        <!-- Cross mobile menu -->
+        <div class="absolute top-4 -right-10">
+          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="cursor-pointer size-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <a class="font-medium" href="index.html">Inicio</a>
+        <a class="font-medium" href="about.html">Quiénes somos</a>
+        <a class="font-medium" href="services.html">Servicios</a>
+        <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+        <a class="font-medium" href="products.html">Productos terminados</a>
+        <a class="font-medium" href="markets.html">Mercados</a>
+        <button
+          class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contacto</span>
+        </button>
+        <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+          <!-- English Button -->
+          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+            data-active="false">
+            <img src="./img/british-flag.avif" alt="British Flag" />
+          </a>
+          <!-- Spanish Button (active by default) -->
+          <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+            data-active="true">
+            <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="bg-[#F4FAFF] md:pt-24 pt-8 pb-10">
+    <div
+      class="w-[90%] max-w-[1440px] lg:w-[70%] mx-auto p-4 md:p-8 lg:p-12 text-center bg-white border border-[#cecdcd] rounded-2xl space-y-3 md:space-y-6 lg:space-y-10">
+      <h1 class="text-xl font-bold md:text-2xl lg:text-4xl">Nuestra propuesta</h1>
+      <p class="text-[#5b5e76] text-sm md:text-lg lg:text-2xl leading-relaxed px-2 md:px-6 lg:px-10">
+        Ofrecemos una amplia gama de servicios y soluciones para la industria
+        farmacéutica.
+      </p>
+    </div>
+
+    <!-- Card-grid -->
+    <div class="w-[90%] max-w-[1440px] grid grid-cols-1 gap-6 mx-auto md:mt-16 mt-6  md:grid-cols-2 lg:grid-cols-3">
+      <!-- material card -->
+      <div class="md:px-6 px-4  md:py-10 py-6 space-y-8 bg-white shadow-md md:px-3 lg:px-6 rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-36" src="./img/card-material.avif" alt="" />
+          <h3 class="text-2xl font-semibold">
+            Distribución de materias primas
+          </h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Distribuimos ingredientes activos (APIs), ingredientes y excipientes.
+          Contamos con los productos más competitivos y de la más alta calidad.
+        </p>
+        <a class=" inline-block w-full text-center items-center justify-center text-[#4860BB] text-xl font-medium"
+          href="./ingredients.html">Lista de APIs
+          <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+              color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+              style="user-select: none; width: 5%; height: 5%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+              <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></line>
+                <polyline points="144 56 216 128 144 200" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></polyline>
+              </g>
+            </svg></span></a>
+        </a>
+      </div>
+      <!-- Tablet card -->
+      <div class="p-6 space-y-8 bg-white shadow-md rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-44" src="./img/card-tablet.avif" alt="" />
+          <h3 class="text-2xl font-semibold">Productos terminados FDFs</h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Ofrecemos soluciones de fabricación e I+D a través de CDMOs de primer nivel.
+        </p>
+        <a class="inline-block w-full text-center items-center justify-center text-[#4860BB] text-xl font-medium"
+          href="./products.html">Lista de PDFs
+          <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+              color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+              style="user-select: none; width: 5%; height: 5%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+              <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></line>
+                <polyline points="144 56 216 128 144 200" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></polyline>
+              </g>
+            </svg></span></a>
+        </a>
+      </div>
+      <!-- Handshake card -->
+      <div class="px-6 py-10 space-y-8 bg-white shadow-md rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-36" src="./img/handshake.avif" alt="" />
+          <h3 class="text-2xl font-bold">Licencias IN/OUT</h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Ofrecemos servicios de licencias para la expansión de nuestros socios y la
+          implementación de sus portafolios de productos terminados de la manera más rápida
+          y eficiente.
+        </p>
+        <a class="inline-block w-full text-center items-center justify-center text-[#4860BB] text-xl font-medium"
+          href="./products.html">Lista de PDFs
+          <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+              color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+              style="user-select: none; width: 5%; height: 5%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+              <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></line>
+                <polyline points="144 56 216 128 144 200" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></polyline>
+              </g>
+            </svg></span></a>
+        </a>
+      </div>
+      <!-- material card -->
+      <div class="md:px-6 px-4  md:py-10 py-6 space-y-8 bg-white shadow-md md:px-3 lg:px-6 rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-36" src="./img/card-api.avif" alt="" />
+          <h3 class="text-2xl font-semibold">Desarrollo de APIs y FDFs</h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Trabajamos estrechamente con nuestros clientes y fabricantes para desarrollar
+          principios activos y medicamentos que satisfagan las necesidades del mercado.
+        </p>
+      </div>
+      <!-- Tablet card -->
+      <div class="p-6 space-y-8 bg-white shadow-md rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-44" src="./img/card-accredation.avif" alt="" />
+          <h3 class="text-2xl font-semibold">
+            Servicios de acreditación y auditorías GMP
+          </h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Ofrecemos servicios de auditorías GMP para garantizar la acreditación de las
+          normativas europeas en términos de calidad.
+        </p>
+      </div>
+      <!-- Handshake card -->
+      <div class="px-6 py-10 space-y-8 bg-white shadow-md rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-36" src="./img/card-technical.avif" alt="" />
+          <h3 class="text-2xl font-bold">Consultoría técnica y soporte regulatorio</h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Ofrecemos soporte regulatorio completo a entidades sin representación local para
+          la auditoría de sus expedientes, presentación de sus productos ante las autoridades
+          y obtención de MAs.
+        </p>
+      </div>
+      <div class="md:px-6 px-4  md:py-10 py-6 space-y-8 bg-white shadow-md md:px-3 lg:px-6 rounded-3xl">
+        <div class="flex items-center justify-center space-x-4">
+          <img class="w-36" src="./img/card-consulting.avif" alt="" />
+          <h3 class="text-2xl font-semibold">
+            Consultoría estratégica y servicios de M&A
+          </h3>
+        </div>
+        <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+          Ofrecemos servicios de consultoría estratégica para la apertura, implementación
+          y expansión de mercados. También asesoramos a empresas sobre oportunidades de M&A.
+        </p>
+      </div>
+    </div>
+
+  </main>
+  <footer class="bg-[#4860BB] flex justify-between items-center pl-24 pr-16">
+    <img class="w-36" src="./img/footer-logo.avif" alt="" />
+    <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

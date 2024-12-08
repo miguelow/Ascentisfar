@@ -1,0 +1,201 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- manrope fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+  <!-- tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Legal</title>
+</head>
+
+<body class="overflow-visible">
+  <header>
+    <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
+      <!-- logo -->
+      <div>
+        <a href="./index.html">
+          <img class="lg:w-64 md:w-36 w-28" src="./img/nav-logo.avif" alt="" />
+        </a>
+      </div>
+      <!-- menu -->
+      <div class="items-center justify-center hidden space-x-4 lg:flex">
+        <a class="font-medium" href="index.html">Inicio</a>
+        <a class="font-medium" href="about.html">Quiénes somos</a>
+        <a class="font-medium" href="services.html">Servicios</a>
+        <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+        <a class="font-medium" href="products.html">Productos terminados</a>
+        <a class="font-medium" href="markets.html">Mercados</a>
+        <button
+          class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contacto</span>
+        </button>
+        <div class=" flex flex-col gap-[2px] space-y-2">
+          <a href="./en/index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="./img/british-flag.avif" alt="" /></a>
+          <a href="./index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="./img/spanish-flag.avif" alt="" /></a>
+        </div>
+      </div>
+
+      <!-- hamburger-icon -->
+      <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center justify-start bg-slate-400 pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
+      <div class="relative flex flex-col space-y-4 text-center">
+        <!-- Cross mobile menu -->
+        <div class="absolute top-4 -right-10">
+          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="cursor-pointer size-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <a class="font-medium" href="index.html">Inicio</a>
+        <a class="font-medium" href="about.html">Quiénes somos</a>
+        <a class="font-medium" href="services.html">Servicios</a>
+        <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+        <a class="font-medium" href="products.html">Productos terminados</a>
+        <a class="font-medium" href="markets.html">Mercados</a>
+        <button
+          class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contacto</span>
+        </button>
+        <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+          <!-- English Button -->
+          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+            data-active="false">
+            <img src="./img/british-flag.avif" alt="British Flag" />
+          </a>
+          <!-- Spanish Button (active by default) -->
+          <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+            data-active="true">
+            <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="mt-14">
+    <div class="md:w-[75%] w-[90%] mx-auto py-8">
+      <h1 class="text-[#5B5E76] text-3xl mb-6">Política de Privacidad y Cookies</h1>
+      <h2 class="mb-8 text-xl font-bold">
+        CONDICIONES GENERALES DEL SITIO WEB DE ASCENTISFAR SL
+      </h2>
+      <h1 class="mb-3 text-xl font-bold">Objeto</h1>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        Estas Condiciones Generales regulan el uso (incluido el acceso) de las
+        páginas web que componen el sitio web de ASCENTISFAR SL (“ASCENTISFAR”),
+        incluyendo el contenido y los servicios disponibles en ellas. Cualquier
+        persona que acceda al Sitio (“Usuario”) acepta cumplir con las Condiciones
+        Generales vigentes en el momento de acceso.
+      </p>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        La persona responsable de este sitio web y propietaria del dominio tal
+        como está registrado en el Registro Mercantil es:
+      </p>
+      <ul class="text-[#5B5E76] text-lg mb-10">
+        <li>ASCENTISFAR</li>
+        <li>NIF B56663156</li>
+        <li>
+          Correo electrónico: <a class="text-[#3D529F]" href="#">info@ascentisfar.es</a>
+        </li>
+        <li>
+          Ubicación: C/ Isabel Colbrand, 6 – 2º - 28050 Madrid – España / Spain
+        </li>
+      </ul>
+      <h1 class="mb-3 text-xl font-bold">NORMAS DE USO</h1>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        ASCENTISFAR no asume ninguna responsabilidad con respecto al material
+        incluido en estas páginas. Dicho material: No necesariamente ofrece
+        información exhaustiva, completa, precisa o actualizada. Los productos
+        ofrecidos pueden estar sujetos a derechos de propiedad industrial y/o
+        intelectual que pueden ser adquiridos exclusivamente para uso autorizado,
+        como investigación y desarrollo. Sin embargo, si encuentra algún error en
+        estas páginas, por favor infórmenos para corregirlo lo antes posible.
+      </p>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        Queda prohibida la reproducción, copia, uso, distribución, comercialización,
+        comunicación pública o cualquier otra actividad que pueda realizarse con el
+        contenido de estas páginas web sin la autorización expresa de ASCENTISFAR.
+        Se señala expresamente que estas actividades son punibles por la legislación
+        vigente sobre propiedad intelectual. ASCENTISFAR no se hace responsable del
+        mal uso del contenido de estas páginas web por parte del usuario. Tampoco
+        se responsabiliza del contenido e información de páginas web de terceros que
+        puedan estar conectadas mediante enlaces a las páginas web de ASCENTISFAR.
+      </p>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        ASCENTISFAR se reserva el derecho de actualizar el contenido de estas
+        páginas web cuando lo considere oportuno, así como de eliminarlas y
+        limitar o impedir el acceso a las mismas, de forma temporal o permanente.
+      </p>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        Cuando sea necesario el uso de una contraseña o nombre de usuario para
+        acceder a algún servicio contenido en estas páginas web, el usuario se
+        compromete a mantenerlo en secreto y a usarlo de manera diligente. En caso
+        de pérdida o uso negligente de la contraseña, el usuario será responsable
+        de cualquier uso que hayan hecho terceros de la misma.
+      </p>
+      <p class="text-[#5B5E76] text-lg mb-10">
+        EN NINGÚN CASO ASCENTISFAR SERÁ RESPONSABLE DE NINGÚN DAÑO DIRECTO,
+        INDIRECTO, ESPECIAL O DE CUALQUIER OTRO TIPO DERIVADO DEL USO DE ESTE SITIO
+        O DE CUALQUIER OTRO SITIO ENLAZADO DESDE ESTE SITIO. La web de ASCENTISFAR
+        puede utilizar cookies (pequeños archivos de información que el servidor
+        envía al ordenador de la persona que accede a la página) para realizar
+        ciertas funciones esenciales para el correcto funcionamiento y visualización
+        del sitio.
+      </p>
+      <h1 class="mb-3 text-xl font-bold">PROPIEDAD INTELECTUAL E INDUSTRIAL</h1>
+      <p class="text-[#5B5E76] text-lg mb-1">
+        Este sitio web está protegido por legislación nacional e internacional sobre
+        propiedad intelectual e industrial.
+      </p>
+      <p class="text-[#5B5E76] text-lg mb-10">
+        El diseño, logos, textos y gráficos del sitio web son propiedad de
+        ASCENTISFAR o cuentan con la licencia correspondiente para su uso.
+      </p>
+      <h1 class="mb-3 text-xl font-bold">LEY APLICABLE Y JURISDICCIÓN</h1>
+      <p class="text-[#5B5E76] text-lg mb-10">
+        Para la resolución de conflictos, se someterá a la legislación española,
+        siendo competentes los Tribunales de Madrid.
+      </p>
+      <h1 class="mb-3 text-xl font-bold">PROTECCIÓN DE DATOS PERSONALES</h1>
+      <p class="text-[#5B5E76] text-lg mb-2">
+        De conformidad con la Ley Orgánica 15/1999 de Protección de Datos Personales,
+        se informa al usuario sobre el tratamiento de sus datos por ASCENTISFAR.
+      </p>
+      <h1 class="mb-3 text-xl font-bold">USO DE COOKIES</h1>
+      <p class="text-[#5B5E76] text-lg mb-2">
+        Actualmente, el uso de cookies no es necesario para el uso de nuestra web.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-[#4860BB] flex justify-around items-center">
+    <img class="w-36" src="./img/footer-logo.avif" alt="" />
+    <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

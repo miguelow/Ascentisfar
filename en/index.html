@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- manrope fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+  <!-- tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet">
+  <title>Home</title>
+
+  <style>
+    /* Keyframe for the scrolling animation */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Apply the animation to the sliding images */
+    .scrolling-slider {
+      animation: scroll 20s linear infinite;
+      animation-delay: 0.5s;
+    }
+  </style>
+</head>
+
+<body class="overflow-visible">
+  <header>
+    <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
+      <!-- logo -->
+      <div>
+        <a href="./index.html">
+          <img class="lg:w-64 md:w-36 w-36" src="../img/nav-logo.avif" alt="" />
+        </a>
+      </div>
+      <!-- menu -->
+      <div class="items-center justify-center hidden space-x-4 lg:flex">
+        <a class="font-medium" href="index.html">Home</a>
+        <a class="font-medium" href="about.html">Who we are</a>
+        <a class="font-medium" href="services.html">Services</a>
+        <a class="font-medium" href="ingredients.html">Active Ingredients</a>
+        <a class="font-medium" href="products.html">Finished Products</a>
+        <a class="font-medium" href="markets.html">Markets</a>
+        <button
+          class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contact</span>
+        </button>
+        <!-- <div class=" flex flex-col gap-[2px] space-y-2">
+          <a href="./en/index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="../img/british-flag.avif" alt="" /></a>
+          <a href="../index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="../img/spanish-flag.avif" alt="" /></a>
+        </div> -->
+
+        <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+          <!-- English Button -->
+          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+            data-active="true">
+            <img src="../img/british-flag.avif" alt="British Flag" />
+          </a>
+          <!-- Spanish Button (active by default) -->
+          <a href="../index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+            data-active="false">
+            <img src="../img/spanish-flag.avif" alt="Spanish Flag" />
+          </a>
+        </div>
+      </div>
+      <!-- hamburger-icon -->
+      <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center justify-start bg-slate-400 pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
+      <div class="relative flex flex-col space-y-4 text-center">
+        <!-- Cross mobile menu -->
+        <div class="absolute top-4 -right-10">
+          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="cursor-pointer size-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <a class="text-xl font-medium" href="index.html">Home</a>
+        <a class="text-xl font-medium" href="about.html">Who we are</a>
+        <a class="text-xl font-medium" href="services.html">Services</a>
+        <a class="text-xl font-medium" href="ingredients.html">Active Ingredients</a>
+        <a class="text-xl font-medium" href="products.html">Finished Products</a>
+        <a class="text-xl font-medium" href="markets.html">Markets</a>
+        <button
+          class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contact</span>
+        </button>
+        <div class="flex items-center justify-center space-x-4">
+          <a href="./en/index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="../img/british-flag.avif" alt="" /></a>
+          <a href="../index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="../img/spanish-flag.avif" alt="" /></a>¸
+        </div>
+      </div>
+    </div>
+    <div class="md:mt-24 mt-4 space-y-6 font-sans text-center">
+      <h1 class="mx-auto w-[90%] text-[30px] font-bold tracking-normal lg:text-6xl">
+        Welcome to ASCENTISFAR
+      </h1>
+      <p
+        class="leading-relaxed tracking-wide text-center w-[90%] text-xl lg:text-2xl lg:w-[50%] mx-auto font-medium text-[#5b5e76]">
+        Suppliers of active ingredients, final product and specialized
+        services for the pharmaceutical industry.
+      </p>
+    </div>
+  </header>
+  <main>
+    <!-- carousal with three photos with an infinite sliders -->
+
+    <div class="overflow-hidden w-full md:mt-16 mt-6">
+      <div class="flex scrolling-slider space-x-4">
+        <!-- Repeat images for seamless scrolling -->
+        <img src="../img/carousal-1.avif" alt="Image 1" class="h-[380px] object-cover">
+        <img src="../img/carousal-2.avif" alt="Image 2" class="h-[380px] object-cover">
+        <img src="../img/carousal-3.avif" alt="Image 3" class="h-[380px] object-cover">
+        <img src="../img/carousal-1.avif" alt="Image 1" class="h-[380px] object-cover">
+        <img src="../img/carousal-2.avif" alt="Image 2" class="h-[380px] object-cover">
+        <img src="../img/carousal-3.avif" alt="Image 3" class="h-[380px] object-cover">
+        <img src="../img/carousal-1.avif" alt="Image 1" class="h-[380px] object-cover">
+        <img src="../img/carousal-2.avif" alt="Image 2" class="h-[380px] object-cover">
+        <img src="../img/carousal-3.avif" alt="Image 3" class="h-[380px] object-cover">
+        <img src="../img/carousal-1.avif" alt="Image 1" class="h-[380px] object-cover">
+        <img src="../img/carousal-2.avif" alt="Image 2" class="h-[380px] object-cover">
+        <img src="../img/carousal-3.avif" alt="Image 3" class="h-[380px] object-cover">
+
+      </div>
+    </div>
+
+    <!-- About us -->
+    <section id="about" class="mt-16 pt-[80px]">
+      <div class="md:w-[80%] w-[90%] mx-auto bg-[#EBF5FF] grid grid-cols-1 lg:grid-cols-2 rounded-3xl p-7 lg:p-4">
+        <div class="flex flex-col items-center justify-center order-last lg:order-first">
+          <img class="rounded-3xl" src="../img/who-we-are-logo.avif" alt="" />
+        </div>
+        <div class="flex flex-col justify-center order-first p-4 md:p-7 lg:p-10 lg:order-last">
+          <div class="w-[85%] mx-auto space-y-4">
+            <h1 class="text-2xl font-semibold lg:text-4xl">About us</h1>
+            <p class="text-[#5b5e76] font-medium lg:text-xl leading-relaxed tracking-wide">
+              We are suppliers of active ingredients, final products and
+              specialized services for the pharmaceutical industry.
+            </p>
+            <a class="inline-block text-[#4860BB] lg:text-xl font-medium" href="./about.html">Get to know us
+              <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+                  color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+                  style="user-select: none; width: 6%; height: 6%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+                  <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                    <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                      stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                    <polyline points="144 56 216 128 144 200" fill="none"
+                      stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                  </g>
+                </svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="mt-16 bg-[#EBF5FF] md:p-16 p-6 pt-[80px]">
+      <div class="flex flex-col items-center justify-center space-y-6 text-center">
+        <h1 class="text-2xl font-semibold lg:text-4xl">Our Services</h1>
+        <p class="text-[#5b5e76] md:w-[60%] lg:w-[50%] mx-auto font-medium lg:text-xl">
+          We offer a wide range of services and solutions for the
+          pharmaceutical industry.
+        </p>
+      </div>
+      <!-- Card-grid -->
+      <div class="grid grid-cols-1 gap-6 mt-16 md:grid-cols-2 lg:grid-cols-3 max-w-[1440px] mx-auto">
+        <!-- material card -->
+        <div class="md:px-6 px-4  md:py-10 py-6 space-y-8 bg-white shadow-md md:px-3 lg:px-6 rounded-3xl">
+          <div class="flex items-center justify-center space-x-4">
+            <img class="w-36" src="../img/card-material.avif" alt="" />
+            <h3 class="text-2xl font-semibold">
+              Distribution of raw materials
+            </h3>
+          </div>
+          <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+            We distribute active ingredients APIs, Ingredients and excipients.
+            We have the most competitive products with the highest quality.
+          </p>
+          <a class="inline-block items-center justify-center  text-center text-[#4860BB] text-xl font-medium"
+            href="./ingredients.html">API list
+            <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+                color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+                style="user-select: none; width: 6%; height: 6%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+                <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                  <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                    stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="24"></line>
+                  <polyline points="144 56 216 128 144 200" fill="none"
+                    stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="24"></polyline>
+                </g>
+              </svg></span></a>
+        </div>
+        <!-- Tablet card -->
+        <div class="p-6 space-y-8 bg-white shadow-md rounded-3xl">
+          <div class="flex items-center justify-center space-x-4">
+            <img class="w-44" src="../img/card-tablet.avif" alt="" />
+            <h3 class="text-2xl font-semibold">Finished product FDFs</h3>
+          </div>
+          <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+            We provide manufacturing and R&D solutions through top-tier CDMOs
+          </p>
+          <a class=" inline-block items-center text-center justify-center text-[#4860BB] text-xl font-medium"
+            href="./products.html">PDF list
+
+            <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+                color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+                style="user-select: none; width: 6%; height: 6%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+                <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                  <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                    stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="24"></line>
+                  <polyline points="144 56 216 128 144 200" fill="none"
+                    stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="24"></polyline>
+                </g>
+              </svg></span>
+          </a>
+        </div>
+        <!-- Handshake card -->
+        <div class="px-6 py-10 space-y-8 bg-white shadow-md rounded-3xl">
+          <div class="flex items-center justify-center space-x-4">
+            <img class="w-36" src="../img/handshake.avif" alt="" />
+            <h3 class="text-2xl font-bold">IN/OUT Licensing</h3>
+          </div>
+          <p class="text-lg lg:text-xl leading-normal text-[#5b5e76] font-medium">
+            We offer Licensing services for the expansion of our partners and
+            implementation of your finished product portfolios in the fastest
+            and most efficient way.
+          </p>
+          <a class=" inline-block text-center items-center justify-center text-[#4860BB] text-xl font-medium"
+            href="./products.html">PDF list <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+                color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+                style="user-select: none; width: 6%; height: 6%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+                <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                  <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                    stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="24"></line>
+                  <polyline points="144 56 216 128 144 200" fill="none"
+                    stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="24"></polyline>
+                </g>
+              </svg></span></a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center mt-10">
+        <a class="text-[#4860BB] inline-block text-center text-lg font-medium" href="./services.html">Learn more <span> <svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+              color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))"
+              style="user-select: none; width: 4%; height: 4%; display: inline-block; fill: var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187)); flex-shrink: 0;">
+              <g color="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" weight="bold">
+                <line x1="40" y1="128" x2="216" y2="128" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></line>
+                <polyline points="144 56 216 128 144 200" fill="none"
+                  stroke="var(--token-78b9a74d-c874-44f4-8483-91f93fd2eb94, rgb(72, 96, 187))" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="24"></polyline>
+              </g>
+            </svg></span></a>
+      </div>
+    </section>
+    <!-- Our Markets section -->
+    <section
+      class="bg-[url('../img/market-bg.avif')] md:h-[90vh] h-[35vh] bg-cover bg-center items-center flex justify-start">
+      <div class="pl-4 lg:pl-10 w-[70%] lg:w-[50%] space-y-6">
+        <h1 class="text-xl font-bold text-white md:text-3xl lg:text-5xl">
+          Our markets
+        </h1>
+        <p class="text-base lg:text-xl leading-relaxed text-[#e1e2ea]">
+          We work with our partners at origin to act in broad regions of the
+          world from regulated countries to emerging and expanding markets.
+        </p>
+        <a class="text-[#e5e6ec] lg:text-xl font-medium inline-block" href="./markets.html">Learn more &rarr;</a>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#4860BB] flex justify-between items-center pl-24 pr-16">
+    <img class="w-36" src="../img/footer-logo.avif" alt="" />
+    <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

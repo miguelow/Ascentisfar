@@ -1,0 +1,380 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- manrope fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Finished Products</title>
+</head>
+
+<body class="overflow-visible font-sans">
+  <header>
+    <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
+      <!-- logo -->
+      <div>
+        <a href="./index.html">
+          <img class="lg:w-64 md:w-36 w-36" src="../img/nav-logo.avif" alt="" />
+        </a>
+      </div>
+      <!-- menu -->
+      <div class="items-center justify-center hidden space-x-4 lg:flex">
+        <a class="font-medium" href="index.html">Home</a>
+        <a class="font-medium" href="about.html">Who we are</a>
+        <a class="font-medium" href="services.html">Services</a>
+        <a class="font-medium" href="ingredients.html">Active Ingredients</a>
+        <a class="font-medium" href="products.html">Finished Products</a>
+        <a class="font-medium" href="markets.html">Markets</a>
+        <button
+          class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contact</span>
+        </button>
+        <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+          <!-- English Button -->
+          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+            data-active="true">
+            <img src="../img/british-flag.avif" alt="British Flag" />
+          </a>
+          <!-- Spanish Button (active by default) -->
+          <a href="../index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+            data-active="false">
+            <img src="../img/spanish-flag.avif" alt="Spanish Flag" />
+          </a>
+        </div>
+      </div>
+      <!-- hamburger-icon -->
+      <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center justify-start bg-slate-400 pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
+      <div class="relative flex flex-col space-y-4 text-center">
+        <!-- Cross mobile menu -->
+        <div class="absolute top-4 -right-10">
+          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="cursor-pointer size-9">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <a class="text-xl font-medium" href="index.html">Home</a>
+        <a class="text-xl font-medium" href="about.html">Who we are</a>
+        <a class="text-xl font-medium" href="services.html">Services</a>
+        <a class="text-xl font-medium" href="ingredients.html">Active Ingredients</a>
+        <a class="text-xl font-medium" href="products.html">Finished Products</a>
+        <a class="text-xl font-medium" href="markets.html">Markets</a>
+        <button
+          class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+          </svg>
+          <span>Contact</span>
+        </button>
+        <div class="flex items-center justify-center space-x-4">
+          <a href="./en/index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="../img/british-flag.avif" alt="" /></a>
+          <a href="../index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              src="../img/spanish-flag.avif" alt="" /></a>¸
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="bg-gradient-to-br from-[#EBF5FF] to-[#7286CB] min-h-screen py-14">
+    <div class="w-[90%] md:w-[80%] lg:w-[50%] mx-auto text-center py-12 space-y-8 bg-white rounded-2xl">
+      <h1 class="font-sans text-4xl font-bold lg:text-5xl">
+        Finished Product Distribution & Licensing
+      </h1>
+      <div class="flex items-center justify-center">
+        <a href="https://drive.google.com/file/d/1oNgOhtdkSmOH1eDsuPFaqYAzssc8TnGg/view" target="_blank">
+
+          <button class="flex items-center justify-center space-x-2 text-xl text-[#7286CB] font-semibold">
+            <span> See / download API list</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-9 bg-white w-[90%] p-5 md:w-[80%] lg:w-[50%] rounded-3xl shadow-md">
+      <h2 class="mb-4 text-xl font-bold">FDF Hospitalary Use</h2>
+      <div class="bg-gray-200 divide-y w-[90%] mx-auto divide-gray-400 shadow-md rounded-3xl">
+        <!-- Accordion Item 1 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-1')">
+            <span class="text-lg text-[#333333]">A-B-C-D</span>
+            <svg id="icon-content-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-1" class="hidden px-4 py-2 text-gray-600">
+            <!-- list-a -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>AzaCitidine Vial</li>
+                <li>Bortezomib Vial</li>
+                <li>Cisplatin Vial</li>
+                <li>Docetaxel Vial</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-2')">
+            <span class="text-[#333333] text-lg">F-G-I</span>
+            <svg id="icon-content-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-2" class="hidden px-4 py-2 text-gray-600">
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <!-- list-E -->
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Fentanil tabs</li>
+                <li>Flutamide tabs</li>
+                <li>Gemcitabine tabs</li>
+                <li>Imatinib tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item-3 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-3')">
+            <span class="text-[#333333] text-lg">P-T</span>
+            <svg id="icon-content-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-3" class="hidden px-4 py-2 text-gray-600">
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <!-- list-i -->
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Paclitaxel Vial</li>
+                <li>Pemetrexed Vial</li>
+                <li>Tamoxifen Tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="my-4 text-xl font-bold">FDF Generics</h2>
+      <div class="bg-gray-200 divide-y w-[90%] mx-auto divide-gray-400 shadow-md rounded-3xl">
+        <!-- Accordion Item 1 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-4')">
+            <span class="text-lg text-[#333333]">A-B-C-D</span>
+            <svg id="icon-content-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-4" class="hidden px-4 py-2 text-gray-600">
+            <!-- list-a -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Alenadronic Acid</li>
+                <li>Aripiprazole Tabs and Arip Odt</li>
+                <li>Atorvastatin Tabs</li>
+              </ul>
+            </div>
+            <!-- list-B -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Bilastine Tabs</li>
+              </ul>
+            </div>
+            <!-- List-C -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Candesartan Hctz</li>
+                <li>Candesartan Tabs</li>
+                <li>Celecoxib Tabs</li>
+              </ul>
+            </div>
+            <!-- List-D -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Desloratadine Caps</li>
+                <li>Donepezil Tabs Odt</li>
+                <li>Donezepil +Memant in tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-5')">
+            <span class="text-[#333333] text-lg">E-I-L-M</span>
+            <svg id="icon-content-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-5" class="hidden px-4 py-2 text-gray-600">
+            <!-- list-E -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Escitalopram Tabs</li>
+                <li>Eslicarbazepine</li>
+                <li>Etoricozib Tabs</li>
+                <li>Ezetimibe Tabs</li>
+              </ul>
+            </div>
+            <!-- List-I -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Irbisartan Hct Tabs</li>
+                <li>Irbisartan Tabs</li>
+                <li>ivabradine Tabs</li>
+              </ul>
+            </div>
+            <!-- List-L -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Lacosamide Tabs</li>
+                <li>Levetiracetam Tabs</li>
+                <li>Levofloxacin Tabs</li>
+                <li>Losartan Hctz Tabs</li>
+              </ul>
+            </div>
+            <!-- List-M -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Memantine Tabs</li>
+                <li>Metformin + Sitaglipt in Tabs</li>
+                <li>Metformin + Vildagliptin Tabs</li>
+                <li>Montelukast Tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item-3 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-6')">
+            <span class="text-[#333333] text-lg">O-P-Q</span>
+            <svg id="icon-content-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-6" class="hidden px-4 py-2 text-gray-600">
+            <!-- list-O -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Olanzapine Tabs</li>
+                <li>Olmesartan Hctz Tabs</li>
+                <li>Olmesartan Tabs</li>
+              </ul>
+            </div>
+            <!-- list-P -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Pantoprazole Tabs</li>
+                <li>Pitavastatin Tabs</li>
+              </ul>
+            </div>
+            <!-- list-Q -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Quetiapine Tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item-4 -->
+        <div class="p-4">
+          <button
+            class="flex items-center justify-between w-full px-4 py-2 font-medium text-left text-gray-800 focus:outline-none"
+            onclick="toggleAccordion('content-7')">
+            <span class="text-[#333333] text-lg">R-S-T-V</span>
+            <svg id="icon-content-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 transform">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <div id="content-7" class="hidden px-4 py-2 text-gray-600">
+            <!-- list-R -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Rebeprazole Tabs</li>
+                <li>Rasagilin Tabs</li>
+                <li>Risedronate Tabs</li>
+                <li>Risperidone Tabs</li>
+                <li>Rosuvastatin Tabs</li>
+              </ul>
+            </div>
+            <!-- list-S -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Sitagliptin Tabs</li>
+                <li>Solifenacin Tabs</li>
+              </ul>
+            </div>
+            <!-- list-T -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>RTadalafil Tabs</li>
+                <li>Telmisartan Hctz Tabs</li>
+                <li>Telmisartan Tabs</li>
+              </ul>
+            </div>
+            <!-- list-V -->
+            <div class="w-full px-10 py-5 mb-0.5 bg-gray-300 rounded-lg">
+              <ul class="w-[90%] mx-auto space-y-2">
+                <li>Valsartan Tabs</li>
+                <li>Valsartan Hct Tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-[#4860BB] flex justify-around items-center">
+    <img class="w-36" src="../img/footer-logo.avif" alt="" />
+    <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

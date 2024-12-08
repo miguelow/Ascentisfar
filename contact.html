@@ -1,0 +1,238 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- manrope fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact</title>
+  </head>
+  <body class="overflow-visible font-sans">
+    <header>
+       <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
+        <!-- logo -->
+        <div>
+          <a href="./index.html">
+            <img class="lg:w-64 md:w-36 w-28" src="./img/nav-logo.avif" alt="" />
+          </a>
+        </div>
+        <!-- menu -->
+        <div class="items-center justify-center hidden space-x-4 lg:flex">
+          <a class="font-medium" href="index.html">Inicio</a>
+          <a class="font-medium" href="about.html">Quiénes somos</a>
+          <a class="font-medium" href="services.html">Servicios</a>
+          <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+          <a class="font-medium" href="products.html">Productos terminados</a>
+          <a class="font-medium" href="markets.html">Mercados</a>
+          <button
+            class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+            </svg>
+            <span>Contacto</span>
+          </button>
+          <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+            <!-- English Button -->
+            <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+              data-active="false">
+              <img src="./img/british-flag.avif" alt="British Flag" />
+            </a>
+            <!-- Spanish Button (active by default) -->
+            <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              data-active="true">
+              <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+            </a>
+          </div>
+        </div>
+  
+        <!-- hamburger-icon -->
+        <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu"
+        class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center justify-start bg-slate-400 pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
+        <div class="relative flex flex-col space-y-4 text-center">
+          <!-- Cross mobile menu -->
+          <div class="absolute top-4 -right-10">
+            <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="cursor-pointer size-9">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </div>
+          <a class="font-medium" href="index.html">Inicio</a>
+          <a class="font-medium" href="about.html">Quiénes somos</a>
+          <a class="font-medium" href="services.html">Servicios</a>
+          <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+          <a class="font-medium" href="products.html">Productos terminados</a>
+          <a class="font-medium" href="markets.html">Mercados</a>
+          <button
+            class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+            </svg>
+            <span>Contacto</span>
+          </button>
+          <div class="flex items-center justify-center space-x-4">
+            <a href="./en/index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+                src="./img/british-flag.avif" alt="" /></a>
+            <a href="./index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+                src="./img/spanish-flag.avif" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="bg-[url('/img/contact.avif')] bg-cover bg-center min-h-screen">
+      <div class="flex items-center justify-end">
+        <div class="w-full max-w-lg p-6 rounded-lg shadow-md">
+          <h1 class="mb-4 text-2xl font-semibold text-center text-gray-800">
+            Contact Us
+          </h1>
+          <form>
+            <!-- Name input -->
+            <div class="mb-4">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full p-4 border rounded-lg focus:outline-none"
+                placeholder="Name, Company, Role"
+                required
+              />
+            </div>
+
+            <!-- Email input -->
+            <div class="mb-4">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full p-4 border rounded-lg focus:outline-none"
+                placeholder="Mail"
+                required
+              />
+            </div>
+
+            <!-- Message input -->
+            <div class="mb-4">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full p-4 rounded-lg focus:outline-none"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Send button -->
+            <div class="text-center">
+              <button
+                type="submit"
+                class="w-full px-6 py-2 font-medium text-white bg-blue-600 rounded-lg"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Address -->
+      <div
+        class="flex flex-col lg:items-start space-y-4 lg:justify-start items-start p-6 justify-center w-full lg:w-[85%] mx-auto"
+      >
+        <!-- 1st -->
+        <div
+          class="flex items-center justify-center space-x-2 text-xl font-semibold leading-normal tracking-wider text-white"
+        >
+          <!-- svg -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+            />
+          </svg>
+          <span>info@ascentisfar.com</span>
+          <span>&rarr;</span>
+        </div>
+        <!-- 2nd -->
+        <div
+          class="flex items-center justify-center space-x-2 text-xl font-semibold leading-normal tracking-wider text-white"
+        >
+          <!-- svg -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+            />
+          </svg>
+          <a href="https://ascentisfar.com">https://ascentisfar.com &rarr;</a>
+        </div>
+        <!-- 3rd -->
+        <div
+          class="flex items-center justify-center space-x-2 text-xl font-semibold leading-normal tracking-wider text-white"
+        >
+          <!-- svg -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+            />
+          </svg>
+
+          <span
+            >C/Isabel Colbrand, 6 - 2&deg; - 28050 Madrd - España / Spain</span
+          >
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#4860BB] flex justify-between items-center pl-24 pr-16">
+      <img class="w-36" src="./img/footer-logo.avif" alt="" />
+      <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
