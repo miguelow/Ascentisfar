@@ -88,10 +88,16 @@
             <span>Contacto</span>
           </button>
           <div class="flex items-center justify-center space-x-4">
-            <a href="./en/index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
-                src="./img/british-flag.avif" alt="" /></a>
-            <a href="./index.html"><img class="min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
-                src="./img/spanish-flag.avif" alt="" /></a>
+            <!-- English Button -->
+            <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+              data-active="false">
+              <img src="./img/british-flag.avif" alt="British Flag" />
+            </a>
+            <!-- Spanish Button (active by default) -->
+            <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              data-active="true">
+              <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+            </a>
           </div>
         </div>
       </div>
