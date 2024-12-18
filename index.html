@@ -42,92 +42,94 @@
 
 <body class="overflow-visible">
   <header>
-    <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
-      <!-- logo -->
-      <div>
-        <a href="./index.html">
-          <img class="lg:w-64 md:w-36 w-28" src="./img/nav-logo.avif" alt="" />
-        </a>
-      </div>
-      <!-- menu -->
-      <div class="items-center justify-center hidden space-x-8 lg:flex">
-        <a class="font-medium" href="index.html">Inicio</a>
-        <a class="font-medium" href="about.html">Quiénes somos</a>
-        <a class="font-medium" href="services.html">Servicios</a>
-        <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
-        <a class="font-medium" href="products.html">Producto terminado</a>
-        <a class="font-medium" href="markets.html">Mercados</a>
-        <button
-          class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-          </svg>
-          <span>Contacto</span>
-        </button>
-
-        <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
-          <!-- English Button -->
-          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
-            data-active="false">
-            <img src="./img/british-flag.avif" alt="British Flag" />
-          </a>
-          <!-- Spanish Button (active by default) -->
-          <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
-            data-active="true">
-            <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+      <nav class="sticky top-0 z-50 flex items-center justify-between md:px-10 px-4 py-3 bg-white shadow-md">
+        <!-- logo -->
+        <div>
+          <a href="./index.html">
+            <img class="lg:w-64 md:w-36 w-28" src="./img/nav-logo.avif" alt="" />
           </a>
         </div>
-      </div>
-
-      <!-- hamburger-icon -->
-      <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-        stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-      </svg>
-    </nav>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-      class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center bg-white justify-start  pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
-      <div class="relative flex flex-col space-y-4 text-center">
-        <!-- Cross mobile menu -->
-        <div class="absolute top-4 -right-10">
-          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="cursor-pointer size-9">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
+        <!-- menu -->
+        <div class="items-center justify-center hidden space-x-8 lg:flex">
+          <a class="font-medium" href="index.html">Inicio</a>
+          <a class="font-medium" href="about.html">Quiénes somos</a>
+          <a class="font-medium" href="services.html">Servicios</a>
+          <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+          <a class="font-medium" href="products.html">Producto terminado</a>
+          <a class="font-medium" href="markets.html">Mercados</a>
+          <button
+            class="bg-[#3D529F] py-3 px-6 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-lg font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+            </svg>
+            <a class="font-medium" href="contact.html">Contacto</a>
+          </button>
+  
+          <div class="flex flex-col gap-[2px] space-y-2" id="language-switcher">
+            <!-- English Button -->
+            <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+              data-active="false">
+              <img src="./img/british-flag.avif" alt="British Flag" />
+            </a>
+            <!-- Spanish Button (active by default) -->
+            <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              data-active="true">
+              <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+            </a>
+          </div>
         </div>
-        <a class="font-medium" href="index.html">Inicio</a>
-        <a class="font-medium" href="about.html">Quiénes somos</a>
-        <a class="font-medium" href="services.html">Servicios</a>
-        <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
-        <a class="font-medium" href="products.html">Producto terminado</a>
-        <a class="font-medium" href="markets.html">Mercados</a>
-        <button
-          class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-          </svg>
-          <span>Contacto</span>
-        </button>
-        <div class="flex items-center justify-center space-x-4">
-          <!-- English Button -->
-          <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
-            data-active="false">
-            <img src="./img/british-flag.avif" alt="British Flag" />
-          </a>
-          <!-- Spanish Button (active by default) -->
-          <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
-            data-active="true">
-            <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
-          </a>
+  
+        <!-- hamburger-icon -->
+        <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="block cursor-pointer lg:hidden size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu"
+        class="hidden absolute top-0 right-0 w-full min-h-[80vh] lg:hidden flex flex-col items-center bg-white justify-start  pt-4 transform -translate-x-full transition-transform duration-1000 z-[100]">
+        <div class="relative flex flex-col space-y-4 text-center">
+          <!-- Cross mobile menu -->
+          <div class="absolute top-4 -right-10">
+            <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="cursor-pointer size-9">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </div>
+          <a class="font-medium" href="index.html">Inicio</a>
+          <a class="font-medium" href="about.html">Quiénes somos</a>
+          <a class="font-medium" href="services.html">Servicios</a>
+          <a class="font-medium" href="ingredients.html">Ingredientes activos</a>
+          <a class="font-medium" href="products.html">Producto terminado</a>
+          <a class="font-medium" href="markets.html">Mercados</a>
+          <button
+            class="bg-[#3D529F] w-48 p-3 flex items-center justify-center text-white space-x-3 border-none rounded-lg text-xl font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+            </svg>
+            <a class="font-medium" href="contact.html">Contacto</a>
+          </button>
+          <div class="flex items-center justify-center space-x-4">
+            <!-- English Button -->
+            <a href="./en/index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#f5f5f5] rounded-md"
+              data-active="false">
+              <img src="./img/british-flag.avif" alt="British Flag" />
+            </a>
+            <!-- Spanish Button (active by default) -->
+            <a href="./index.html" class="language-btn min-w-5 max-w-7 p-1 border border-[#3d529f] rounded-md"
+              data-active="true">
+              <img src="./img/spanish-flag.avif" alt="Spanish Flag" />
+            </a>
+          </div>
+  
         </div>
-
       </div>
-    </div>
+  </header>
+  <main>
     <div class="md:mt-24 mt-4 space-y-6 font-sans text-center">
       <h1 class="mx-auto w-[90%] text-[30px] font-bold tracking-normal lg:text-6xl">
         Bienvenido a ASCENTISFAR
@@ -138,9 +140,6 @@
         farmacéutica.
       </p>
     </div>
-
-  </header>
-  <main>
     <!-- carousal with three photos with an infinite sliders -->
 
 
@@ -305,7 +304,7 @@
 
     <!-- Our Markets section -->
     <section
-      class="bg-[url('/img/market-bg.avif')] md:h-[90vh] -[35vh] bg-cover bg-center items-center flex justify-start p-20 md:px-0">
+      class="bg-[url('/img/market-bg.avif')] md:h-[90vh] -[35vh] bg-cover bg-center items-center flex justify-start p-10 md:px-0">
       <div class="pl-4 lg:pl-10 w-[70%] lg:w-[50%] space-y-6">
         <h1 class="text-xl font-bold text-white md:text-3xl lg:text-5xl">
           Nuestros mercados
@@ -337,9 +336,5 @@
     <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
   </footer>
   <script src="script.js"></script>
-
-
-
 </body>
-
 </html>
