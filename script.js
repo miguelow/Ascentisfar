@@ -39,10 +39,6 @@ function toggleAccordion(id) {
   });
 }
 
-document.querySelector("button").addEventListener("click", function () {
-  window.location.href = "contact.html";
-});
-
 
 // script to make the flag active
 document.addEventListener("DOMContentLoaded", () => {
