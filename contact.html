@@ -108,7 +108,7 @@
   <main class="bg-[url('/img/contact.avif')] bg-cover bg-center min-h-screen">
     <div class="flex items-center justify-center pt-20">
       <div class="w-full max-w-lg p-6 rounded-lg">
-        <form>
+        <form id="contactForm">
           <!-- Name input -->
           <div class="mb-4">
             <input type="text" id="name" name="name" class="w-full p-4 border rounded-lg focus:outline-none"
@@ -181,7 +181,9 @@
     </div>
     <a href="./legal.html"><span class="font-light tracking-wider text-white">Legal</span></a>
   </footer>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="config.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

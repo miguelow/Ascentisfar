@@ -62,3 +62,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+emailjs.init(config.EMAIL_PUBLIC_KEY);
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Enviando...';
+    submitButton.disabled = true;
+
+    // Verificar los datos que se envían
+    const formData = new FormData(this);
+
+    emailjs.sendForm(
+        config.EMAIL_SERVICE_ID,
+        config.EMAIL_TEMPLATE_ID,
+        this
+    )
+    .then((response) => {
+        form.reset();
+    })
+    .catch((error) => {
+        alert('Ha habido un error al enviar el mensaje');
+    })
+    .finally(() => {
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+});

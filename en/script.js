@@ -16,32 +16,6 @@ menuClose.addEventListener("click", () => {
   }, 1000);
 });
 
-// function toggleAccordion(id) {
-//   console.log('==id', id);
-//   // Get all accordion contents and icons
-//   const allContents = document.querySelectorAll('[id^="content-"]');
-//   const allIcons = document.querySelectorAll('[id^="icon-content-"]');
-
-//   console.log('==all content', allContents)
-
-//   // Loop through all accordion items
-//   allContents.forEach((content) => {
-//     const icon = document.getElementById("icon-" + content.id);
-//     // console.log('===content', content)
-//     if (content.id === id) {
-//       // Toggle the clicked accordion
-//       console.log('==id', content.id);
-//       content.classList.toggle("hidden");
-//       icon.classList.toggle("rotate-180");
-//     } else {
-//       // Close all other accordions
-//       console.log('==id', content.id);
-//       content.classList.add("hidden");
-//       icon.classList.remove("rotate-180");
-//     }
-//   });
-// }
-
 function toggleAccordion(id) {
 
   // Convert NodeList to array
@@ -68,4 +42,38 @@ function toggleAccordion(id) {
 
 document.querySelector("button").addEventListener("click", function () {
   window.location.href = "contact.html";
+});
+
+emailjs.init(config.EMAIL_PUBLIC_KEY);
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Enviando...';
+    submitButton.disabled = true;
+
+    // Verificar los datos que se envían
+    const formData = new FormData(this);
+    console.log('Form data:', Object.fromEntries(formData));
+
+    emailjs.sendForm(
+        config.EMAIL_SERVICE_ID,
+        config.EMAIL_TEMPLATE_ID,
+        this
+    )
+    .then((response) => {
+        alert('Mensaje enviado correctamente');
+        form.reset();
+    })
+    .catch((error) => {
+        alert('Ha habido un error al enviar el mensaje');
+    })
+    .finally(() => {
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
 });
