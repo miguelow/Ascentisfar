@@ -18,6 +18,10 @@ a, span {
   font-size: 16px !important;
 }
 
+ footer span {
+  font-size: 12px !important;
+}
+
 img[alt="Footer Logo"] {
   width: 12rem !important;
 }
