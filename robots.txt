@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /en/
+
+# Sitemap
+Sitemap: https://www.ascentisfar.com/sitemap.xml
