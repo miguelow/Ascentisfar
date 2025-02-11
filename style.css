@@ -7,11 +7,20 @@
 h1 {
   font-size: 30px !important;
 }
+h1.title{
+  font-size: 34px !important;
+}
 h2 {
   font-size: 24px !important;
 }
 p {
   font-size: 18px !important;
+  letter-spacing: 0.025em;
+  line-height: 1.75rem !important;
+}
+
+p.subtitle{
+  font-size: 22px !important;
   letter-spacing: 0.025em;
   line-height: 1.75rem !important;
 }
