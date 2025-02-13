@@ -12,6 +12,10 @@ h1.title {
   font-size: 30px !important;
 }
 
+p.subtitle{
+  font-size: 20px !important;
+}
+
 @media (min-width: 768px) {
   h1 {
       font-size: 30px !important;
@@ -35,12 +39,6 @@ p {
   letter-spacing: 0.025em;
   line-height: 1.75rem !important;
 }    
-
-p.subtitle{
-  font-size: 22px !important;
-  letter-spacing: 0.025em;
-  line-height: 1.75rem !important;
-}
 
 p.caja{
 
